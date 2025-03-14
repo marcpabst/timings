@@ -4,9 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+winit = { version = "0.29" }
 env_logger = "0.11.5"
-pollster = "0.4.0"
 wgpu = { path = "../wgpu/wgpu" }
-winit = { version = "0.29"}
-windows = { version = "0.58", default-features = false, features = ["Win32_Graphics_Direct3D12", "Win32_Graphics_Dxgi_Common"] }
+pollster = "0.4.0"
+windows = { version = "0.58", default-features = false, features = [
+    "Win32_Graphics_Direct3D12",
+    "Win32_Graphics_Dxgi_Common",
+] }
 serialport = "4.6.1"
+polars = { version = "0.46.0", features = ["csv"] }
